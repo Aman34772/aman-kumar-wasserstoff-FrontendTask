@@ -1,14 +1,16 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <main onClick={() => router.push('/events')} className={`main min-h-screen p-20 ${inter.className}`}>
+    <main
+      onClick={() => router.push("/events")}
+      className={`main min-h-screen p-20 ${inter.className}`}
+    >
       <div className=" w-full">
         <Image
           src="/AstrixLogo.png"
@@ -18,8 +20,8 @@ export default function Home() {
         />
       </div>
 
-      <div  className="flex flex-column items-center justify-center ">
-        <div  className="">
+      <div className="flex flex-column items-center justify-center ">
+        <div className="">
           <div className="mainContainer relative flex items-center mt-16">
             <h1>WE</h1>
             <div className="flex">
@@ -55,85 +57,80 @@ export default function Home() {
           </div>
 
           <div className="mainContainer relative flex items-center">
-          <div className="flex">
-
-            <Image
-              className="h-14 img31"
-              src="/image 144.png"
-              width={298}
-              height={300}
-              alt="Picture on the 3rd line"
-            />
-            <div className="early3">
-                <p className="flex pl-2 exampleLeft3">BETWEEN
-                
-            <Image
-              className="h-14 img32"
-              src="/image 145.png"
-              width={180}
-              height={300}
-              alt="Picture on the 3rd line"
-            />
-            <span>MUSIC</span>
+            <div className="flex">
+              <Image
+                className="h-14 img31"
+                src="/image 144.png"
+                width={298}
+                height={300}
+                alt="Picture on the 3rd line"
+              />
+              <div className="early3">
+                <p className="flex pl-2 exampleLeft3">
+                  BETWEEN
+                  <Image
+                    className="h-14 img32"
+                    src="/image 145.png"
+                    width={180}
+                    height={300}
+                    alt="Picture on the 3rd line"
+                  />
+                  <span>MUSIC</span>
                 </p>
+              </div>
             </div>
-          </div>
           </div>
 
           <div className="mainContainer relative flex items-center">
-      
             <h1>ARTIST</h1>
             <div className="flex">
-
-            <Image
-              className="h-14 img41"
-              src="/image 147.png"
-              width={280}
-              height={300}
-              alt="Picture on the 4th line"
-            />
-            <div className="early">
-                <p className="flex pl-2 exampleLeft">CULTURE
-                
-                <Image
-              className="h-14 img42"
-              src="/image 146.png"
-              width={260}
-              height={300}
-              alt="Picture on the 4th line"
-            />
+              <Image
+                className="h-14 img41"
+                src="/image 147.png"
+                width={280}
+                height={300}
+                alt="Picture on the 4th line"
+              />
+              <div className="early">
+                <p className="flex pl-2 exampleLeft">
+                  CULTURE
+                  <Image
+                    className="h-14 img42"
+                    src="/image 146.png"
+                    width={260}
+                    height={300}
+                    alt="Picture on the 4th line"
+                  />
                 </p>
-            </div>
-            
+              </div>
             </div>
           </div>
 
           <div className="mainContainer relative flex items-center ">
             <div className="flex">
-            <Image
-              className="h-14 img51"
-              src="/image 139.png"
-              width={230}
-              height={100}
-              alt="Picture on the last line"
-            />
-            
+              <Image
+                className="h-14 img51"
+                src="/image 139.png"
+                width={230}
+                height={100}
+                alt="Picture on the last line"
+              />
 
-            <div className="early3">
-                <p className="flex pl-2 exampleLeft3">ART
-            <Image
-              className="h-14 img52"
-              src="/image 137.png"
-              width={145}
-              height={100}
-              alt="Picture on the last line"
-            />
-            <span>& COLLECTIONS</span>
-            
-            </p>
-</div>
-          </div>
+              <div className="early3">
+                <p className="flex pl-2 exampleLeft3">
+                  ART
+                  <Image
+                    className="h-14 img52"
+                    src="/image 137.png"
+                    width={145}
+                    height={100}
+                    alt="Picture on the last line"
+                  />
+                  <span>& COLLECTIONS</span>
+                </p>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </main>

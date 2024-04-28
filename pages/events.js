@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "@/styles/events.module.css";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 const events = () => {
-  const router = useRouter()
+  const router = useRouter();
 
   const slides = [
     {
@@ -79,22 +79,24 @@ const events = () => {
                       className={`${styles.slide}`}
                       key={slide.id}
                       style={{
-                        opacity: index===currentIndex ? 1 : 0.8,
+                        opacity: index === currentIndex ? 1 : 0.8,
                         transform: `translate3d(${
                           (index - currentIndex) * 100
                         }%, 0, 0)`,
                       }}
                     >
-                      <Image className="relative"
+                      <Image
+                        className="relative"
                         src={slide.image}
                         width={450}
                         height={550}
                         alt="Picture"
                       />
-                      {
-                        index===currentIndex ? "" : <p className={styles.imgLogo}>Event Name</p>
-                      }
-                      
+                      {index === currentIndex ? (
+                        ""
+                      ) : (
+                        <p className={styles.imgLogo}>Event Name</p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -116,7 +118,11 @@ const events = () => {
                   checked={!isActive}
                   onChange={handleToggle}
                 />
-                <label onClick={() => router.push('/collections')} htmlFor="contrasts-off" className={styles.offLabel}>
+                <label
+                  onClick={() => router.push("/collections")}
+                  htmlFor="contrasts-off"
+                  className={styles.offLabel}
+                >
                   Collections
                 </label>
                 <span className={styles.selected} aria-hidden="true"></span>
@@ -124,21 +130,17 @@ const events = () => {
             </div>
           </div>
 
-          
-
-        <span className={`w-20 h-screen ml-auto ${styles.spn}`}>
-        <div className={`${styles.early}`}>
-
-          <div className={styles.article}>
-            <p class={styles.exampleLeft}>
-              Event : Oasis Bus tour , JLN Stadium , Delhi{" "}
-              <span className={styles.symbol}>*</span> Collection Live : Meta
-              Lives , live on astrix{" "}
-            </p>
-          </div>
-        </div>
-
-        </span>
+          <span className={`w-20 h-screen ml-auto ${styles.spn}`}>
+            <div className={`${styles.early}`}>
+              <div className={styles.article}>
+                <p className={`font-semibold ${styles.exampleLeft}`}>
+                  Event : Oasis Bus tour , JLN Stadium , Delhi{" "}
+                  <span className={styles.symbol}>*</span> Collection Live :
+                  Meta Lives , live on astrix{" "}
+                </p>
+              </div>
+            </div>
+          </span>
 
           <div className={` ${styles.right}`}>
             <div className="p-5">
@@ -211,10 +213,7 @@ const events = () => {
               </div>
             </div>
           </div>
-
-        
         </div>
-
       </main>
     </>
   );
