@@ -57,7 +57,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 https://github.com/Aman34772/wasserstoff-frontend-task.git
 
 ## Hosted Link
-
+https://wasserstoff-frontend-task-umber.vercel.app/
 ## How I approached the task
 
 I initiated the project by setting up a Next.js framework with Tailwind CSS for responsive styling and Framer Motion for adding smooth animations and in this Next.js project i have used the pages router not the app router .
